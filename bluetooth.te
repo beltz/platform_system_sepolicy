@@ -70,3 +70,5 @@ allow bluetooth media_rw_data_file:file create_file_perms;
 # bluetooth requires net_{admin,raw,bind_service} and wake_alarm and block_suspend.
 neverallow bluetooth self:capability ~{ net_admin net_raw net_bind_service };
 neverallow bluetooth self:capability2 ~{ wake_alarm block_suspend };
+
+r_dir_file(bluetooth, storage_stub_file);
